@@ -14,7 +14,7 @@ overlay.onclick=function(){
   menu.classList.remove('active');
 }
 
-let allLinks=document.querySelectorAll('.links li:not(:last-child)');
+let allLinks=document.querySelectorAll('.links >li:not(:last-child)');
 allLinks.forEach((e)=>{
   e.addEventListener('click',()=>{
     allLinks.forEach((e)=>e.classList.remove('active'))
@@ -24,7 +24,6 @@ allLinks.forEach((e)=>{
     overlay.classList.remove('active')
   })
 })
-
 
 //Gallery  Imgs Click
 let allBoxGallery=document.querySelectorAll('.box-gallery');
@@ -86,9 +85,9 @@ let hoursHtml=document.querySelector('.hours')
 let munitseHtml=document.querySelector('.munites')
 let secondsHtml=document.querySelector('.seconds')
 
-let dateNow=new Date();
 let countDown=setInterval(()=>{
   let dateEvents=new Date('Dec 31, 2023 23:59:59');
+  let dateNow=new Date();
   let dif=dateEvents.getTime()-dateNow.getTime();
   if(dif>0){
     let days=Math.floor(dif/1000/60/60/24);
@@ -110,4 +109,4 @@ let countDown=setInterval(()=>{
 
 
 let copyYear=document.querySelector('.year');
-copyYear.innerHTML=dateNow.getFullYear();
+copyYear.innerHTML=new Date().getFullYear();

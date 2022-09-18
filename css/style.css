@@ -1,6 +1,5 @@
 /* Start Global Rules */
 * {
-  font-family: "Cairo", sans-serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -243,7 +242,7 @@ header .container .content nav .box li:not(:last-child) {
 }
 header .container .content nav .box li > a {
   display: block;
-  padding: 10px;
+  padding: 15px;
   font-weight: 500;
   color: var(--main-color);
   font-size: 18px;
@@ -519,7 +518,7 @@ nav .box li > a > i {
 .overlay-gallary {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: -888888;
   display: flex;
   align-items: center;
@@ -1455,6 +1454,12 @@ nav .box li > a > i {
   .discount .discount-form {
     flex-basis: 100%;
   }
+  .discount .imgs .content-imgs h3 {
+    font-size: 25px;
+  }
+  .discount .imgs .content-imgs p {
+    font-size: 16px;
+  }
 }
 /* End Discount  */
 /* Start Footer */
@@ -1462,7 +1467,7 @@ nav .box li > a > i {
 
 footer {
   background-color: #191919;
-  padding: 70px 0 0;
+  padding: 50px 0 0;
 }
 footer .container .content-footer {
   display: grid;
@@ -1486,6 +1491,7 @@ footer .container .content-footer .box-footer .social {
 footer .container .content-footer .box-footer .dis {
   padding: 20px 0;
   font-size: 16px;
+  line-height: 1.5;
 }
 footer .container .content-footer .box-footer .social span {
   display: flex;
