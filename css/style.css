@@ -752,14 +752,75 @@ nav .box li > a > i {
 }
 /* End testimonials  */
 /* Start Teams */
-.teams {
-}
-.teams .container {
-}
+
 .teams .container .content-teams {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 30px;
+}
+.teams .container .content-teams .box-teams {
+  position: relative;
+}
+.teams .container .content-teams .box-teams::before,
+.teams .container .content-teams .box-teams::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f3f3f3;
+  height: 100%;
+  transition: var(--main-transition);
+  border-radius: 10px;
+}
+.teams .container .content-teams .box-teams::before {
+  width: calc(100% - 70px);
+  z-index: -2;
+}
+.teams .container .content-teams .box-teams::after {
+  width: 0;
+  background-color: #e4e4e4;
+  z-index: -1;
+}
+.teams .container .content-teams .box-teams:hover::after {
+  width: calc(100% - 70px);
+}
+.teams .container .content-teams .box-teams .data {
+  display: flex;
+  padding: 50px 0 10px;
+}
+.teams .container .content-teams .box-teams .data img {
+  max-width: 88%;
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+.teams .container .content-teams .box-teams:hover .data img {
+  filter: grayscale(100%);
+}
+.teams .container .content-teams .box-teams .data .social-teams {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.teams .container .content-teams .box-teams .data .social-teams span {
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.teams .container .content-teams .box-teams .data .social-teams span:hover {
+  color: var(--main-color);
+}
+.teams .container .content-teams .box-teams .info {
+  padding-left: 80px;
+}
+.teams .container .content-teams .box-teams .info h3 {
+  font-size: 23px;
+  color: var(--main-color);
+  padding: 5px 0;
+}
+.teams .container .content-teams .box-teams .info p {
+  font-size: 18px;
+  padding-bottom: 15px;
 }
 /* End Teams */
 /* Start services  */
@@ -1216,10 +1277,7 @@ nav .box li > a > i {
 }
 /* Ends pricing plans */
 /* Start Top Vedio  */
-.top-vedio {
-}
-.top-vedio .container {
-}
+
 .top-vedio .container .content-top-vedio {
   display: flex;
   gap: 30px;
@@ -1422,7 +1480,7 @@ nav .box li > a > i {
 .discount .discount-form form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 450px;
   overflow: hidden;
   margin: 10px auto 30px;
 }
@@ -1453,6 +1511,9 @@ nav .box li > a > i {
   }
   .discount .discount-form {
     flex-basis: 100%;
+  }
+  .discount .discount-form form {
+    width: 300px;
   }
   .discount .imgs .content-imgs h3 {
     font-size: 25px;
