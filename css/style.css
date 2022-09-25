@@ -537,8 +537,8 @@ nav .box li > a > i {
 .overlay-gallary .show-img span {
   position: absolute;
   font-size: 25px;
-  right: 2px;
-  top: -12px;
+  right: -16px;
+  top: -16px;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -822,6 +822,14 @@ nav .box li > a > i {
 .teams .container .content-teams .box-teams .info p {
   font-size: 18px;
   padding-bottom: 15px;
+}
+@media (max-width: 798px) {
+  .teams .container .content-teams .box-teams .info h3 {
+    font-size: 20px;
+  }
+  .teams .container .content-teams .box-teams .info p {
+    font-size: 16px;
+  }
 }
 /* End Teams */
 /* Start services  */
@@ -1300,8 +1308,7 @@ nav .box li > a > i {
 .top-vedio .container .content-top-vedio .infor .head span {
   font-size: 18px;
 }
-.top-vedio .container .content-top-vedio .infor ul {
-}
+
 .top-vedio .container .content-top-vedio .infor ul li {
   padding: 20px;
   border: 1px solid var(--section-background);
